@@ -32,7 +32,7 @@ def encrypt(msg, keyPad):
   bitKey = convertToBits(keyPad)
   #Goes through every bit in message
   for i in range(len(bitMsg)): 
-    #XOR bit flips the message by key
+    #XOR bit flips the message with key
     if bitMsg[i] == bitKey[i]: 
       bitText += "0"
     else:
@@ -46,7 +46,7 @@ def decrypt(cip, keyPad):
   bitKey = convertToBits(keyPad)
   #Goes through every bit in message
   for i in range(len(bitCip)):
-    #XOR bit flips the cipherText by key
+    #XOR bit flips the cipherText with key
     if bitCip[i] == bitKey[i]:
       bitText += "0"
     else:
